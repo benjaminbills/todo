@@ -1,0 +1,11 @@
+<form (ngSubmit)="submitTask(); taskForm.reset()" #taskForm="ngForm">
+  <input
+    type="text"
+    placeholder="add new to do"
+    id="name"
+    [(ngModel)]="newTask.name"
+    name="name"
+    #name="ngModel"
+  />
+  <button type="submit">Add</button>
+</form>

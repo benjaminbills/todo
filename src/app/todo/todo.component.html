@@ -1,0 +1,8 @@
+<h1>Todo List</h1>
+<app-todo-form (addTask)="addNewTask($event)"></app-todo-form>
+<div *ngFor="let task of tasks; let i = index">
+  <div>
+    <p id="{{ i }}">{{ task.name }}</p>
+    <button (click)="deleteTask(i)">Delete</button>
+  </div>
+</div>
